@@ -1,0 +1,29 @@
+NoodleMoodle Feature List
+
+Nice to have:
+-> Preditct average noodle consumption based on the amount of
+the last times 
+-> Noodle Statistics (=> Noodle Highscore, "Amount of Noodles needed", How many noodles consumed in total)
+-> Noodle Broadcaster/Alarm (Let other people in the office know
+when the noodle are ready, with beeping noise/or visual effect)
+-> List with common foods to bring
+-> Timer until next Noodle Day (upcoming Noodle Day Date)
+
+
+If i have to much time:
+-> switch between dark and light theme
+-> webcam integration
+-> Use v-if to use only one modal instead of two (maybe its no possible)
+
+ToDO:
+
+-> Make proper vegan/vegetarian checkbox label in participateModal
+-> Change Vue js from dev to prod mode by changing the js file!
+-> Implement logging in JAVA
+-> alt tags for true/false icons (vegan)
+
+
+
+https://stackoverflow.com/questions/20825211/bootstrap-table-striped-how-do-i-change-the-stripe-background-colour
+https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html
+https://stackoverflow.com/questions/57900569/exception-occured-in-test-when-add-hibernate-orm-panache-in-quarkus

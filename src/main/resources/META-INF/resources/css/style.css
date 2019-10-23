@@ -1,0 +1,25 @@
+/* Required for proper vertical center aligning */
+html,body {
+    height: 100%;
+}
+
+table {
+    font-family: 'Open Sans', sans-serif;
+    border: 3px solid rgb(0, 123, 255);
+}
+
+table th {
+    text-transform: uppercase;
+}
+
+.fa-edit:hover {
+    color: rgb(0, 123, 255);
+}
+
+.fa-trash:hover {
+    color: rgb(0, 123, 255);
+}
+
+.modal-open[style] {
+    padding-right: 0px !important;
+}
