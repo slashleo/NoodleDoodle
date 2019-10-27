@@ -15,7 +15,7 @@ new Vue({
     methods: {
         readEntry: function () {
             axios
-                .get('http://localhost:8080/' + this.id)
+                .get(window.location.origin + '/' + this.id)
                 .then(response => (
                     this.inputNameModel = response.data.name,
                     this.inputFoodModel = response.data.food,
@@ -24,7 +24,7 @@ new Vue({
         },
         readAllEntries: function () {
             axios
-                .get('http://localhost:8080/all')
+                .get(window.location.origin + '/all')
                 .then(response => (this.results = response.data))
                 .catch(error => { console.log(error) })
         },
@@ -34,7 +34,7 @@ new Vue({
                 this.inputFoodModel = 'INVALID'
             }
             axios
-                .post('http://localhost:8080/create',
+                .post(window.location.origin + '/create',
                     {
                         name: this.inputNameModel,
                         food: this.inputFoodModel,
@@ -47,7 +47,7 @@ new Vue({
         },
         updateEntry: function () {
             axios
-                .put('http://localhost:8080/update',
+                .put(window.location.origin + '/update',
                     {
                         id: this.id,
                         name: this.inputNameModel,
@@ -61,7 +61,7 @@ new Vue({
         },
         deleteEntry: function () {
             axios
-                .delete('http://localhost:8080/delete',
+                .delete(window.location.origin + '/delete',
                     {
                         data: {
                             id: this.id,
