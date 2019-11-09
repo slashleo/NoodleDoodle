@@ -12,7 +12,7 @@ public class NoodleResourceTest {
 
     @Test
     public void testDeleteEndpoint() {
-        JSONObject jsonObject = new JSONObject()
+        final JSONObject jsonObject = new JSONObject()
                 .put("id", -1)
                 .put("name", "unitTest")
                 .put("food", "testFood")

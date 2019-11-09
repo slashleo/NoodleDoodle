@@ -28,7 +28,7 @@ public class NoodleDaoImpl implements NoodleDao{
     @Override
     @Transactional
     public NoodleDto create(final NoodleDto noodleDto) {
-        NoodleDto newNoodleDto = new NoodleDto();
+        final NoodleDto newNoodleDto = new NoodleDto();
         newNoodleDto.setName(noodleDto.getName());
         newNoodleDto.setFood(noodleDto.getFood());
         newNoodleDto.setVegan(noodleDto.getVegan());
@@ -52,14 +52,14 @@ public class NoodleDaoImpl implements NoodleDao{
     @Override
     public List<NoodleDto> readAll() {
         List<NoodleDto> noodleDtoList = null;
-        TypedQuery<NoodleDto> query = entityManager.createQuery("from NoodleDto", NoodleDto.class);
+        final TypedQuery<NoodleDto> query = entityManager.createQuery("from NoodleDto", NoodleDto.class);
 
         // TODO Is this try-catch block good? Should I apply this to the other DaoImpl methods as well?
         try {
             noodleDtoList = query.getResultList();
         }
-        catch(PersistenceException e) {
-            LOGGER.debug("Error in NoodleDaoImpl.readAll() " + e);
+        catch(final PersistenceException e) {
+            LOGGER.debug("Error in NoodleDaoImpl.readAll() " + e.getLocalizedMessage(), e);
         }
 
         return noodleDtoList;
@@ -80,7 +80,7 @@ public class NoodleDaoImpl implements NoodleDao{
     @Override
     @Transactional
     public void delete(final NoodleDto noodleDto) {
-        NoodleDto deleteNoodleDto = entityManager.merge(noodleDto);
+        final NoodleDto deleteNoodleDto = entityManager.merge(noodleDto);
         entityManager.remove(deleteNoodleDto);
     }
 }

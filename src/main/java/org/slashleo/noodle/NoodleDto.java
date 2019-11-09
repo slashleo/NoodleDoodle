@@ -37,7 +37,7 @@ public class NoodleDto {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(final int id) {
         this.id = id;
     }
 
@@ -45,7 +45,7 @@ public class NoodleDto {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -53,7 +53,7 @@ public class NoodleDto {
         return food;
     }
 
-    public void setFood(String food) {
+    public void setFood(final String food) {
         this.food = food;
     }
 
@@ -61,7 +61,7 @@ public class NoodleDto {
         return vegan;
     }
 
-    public void setVegan(Boolean vegan) {
+    public void setVegan(final Boolean vegan) {
         this.vegan = vegan;
     }
 }

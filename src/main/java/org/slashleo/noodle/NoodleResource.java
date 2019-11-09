@@ -24,12 +24,12 @@ public class NoodleResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createEndpoint(final NoodleDto noodleDto){
-        NoodleDto newNoodleDto = new NoodleDto();
+        final NoodleDto newNoodleDto = new NoodleDto();
         newNoodleDto.setName(noodleDto.getName());
         newNoodleDto.setFood(noodleDto.getFood());
         newNoodleDto.setVegan(noodleDto.getVegan());
 
-        NoodleDto createdNoodle = noodleDao.create(newNoodleDto);
+        final NoodleDto createdNoodle = noodleDao.create(newNoodleDto);
 
         return Response.created(URI.create(BASE_URI + createdNoodle.getId())).entity(createdNoodle).build();
     }
